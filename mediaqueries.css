@@ -100,4 +100,15 @@
     .text-container {
       text-align: justify;
     }
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .row .col {
+        margin-top: 30px;
+    }
+    .cert-col {
+        display: flex;
+        flex-direction: column;
+    }
   }

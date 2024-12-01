@@ -279,7 +279,7 @@ section {
 }
 
 .about-pic {
-    border-radius: 2rem;
+    border-radius: 50%;
 }
 
 .arrow {
@@ -312,6 +312,64 @@ section {
 /* EXPERIENCE */
 #experience {
     position: relative;
+    /* padding-left: 10rem; */
+}
+
+.row {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.col .header-title {
+    padding: 0px 0px 20px 30px;
+}
+
+.col .contents {
+    padding: 0px 30px;
+    border-left: 2px solid;
+}
+
+.col .contents .box {
+    position: relative;
+    padding: 20px;
+    border: 1px white solid;
+    transition: all 0.4s;
+    margin-bottom: 10px;
+    cursor: default;
+}
+
+.col .contents .box:hover {
+    box-shadow: 0px 3px 12px 0px;
+}
+
+.col .contents .box::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    right: calc(100% + 22px);
+    top: 0;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.box h4{
+    position: relative;
+    color: black;
+}
+
+.box h3 {
+    font-style: italic;
+    color: gray;
+}
+
+.box p {
+    line-height: 1.2;
+    color: #666;
+    font-size: medium;
 }
 
 .experience-subtitle {
@@ -346,6 +404,31 @@ section {
 .project-btn {
     color: black;
     border-color: rgb(163, 163, 163);
+}
+
+/* CERTIFICATIONS */
+
+#certifications {
+    position: relative;
+}
+
+.cert-col {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.cert-container {
+    padding: 4rem 4rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cert {
+    position: relative;
 }
 
 /* CONTACT */
