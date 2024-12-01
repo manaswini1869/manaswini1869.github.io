@@ -1,310 +1,220 @@
-<!-- HELLO
--
-DevFolio is a minimal, clean, lightweight and fully responsive template for Devlopers!
-Created by Anil Seervi.
--
-GitHub repo: https://github.com/AnilSeervi/DevFolio
-README: https://github.com/AnilSeervi/DevFolio/blob/master/README.md
--
-Have fun creating your portfolio on this template!!! -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-
-    <!-- Title: add your Portfolio websites's title here -->
-    <title>Manaswini Gogineni | Software Developer</title>
-
-    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
-    <meta name="keywords" content="[username], [name], skill" />
-
-    <!-- Improve your SEO by adding a small descrption of you -->
-    <meta name="description" content="Manaswini Gogineni | Software Developer | Cloud Enthusiast" />
-
-    <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
-    <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
-
-    <!-- Add your primary-theme color for the value of content -->
-    <meta name="theme-color" content="#36d1dc" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <!-- Fill content with the URL of this portfolio you'll host -->
-    <meta property="og:url" content="https://devfolio.js.org/" />
-    <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
-    <meta property="og:title" content="Manaswini Gogineni | Developer" />
-    <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
-    <meta property="og:description" content="Made using DevFolio Template" />
-    <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
-      so that a thumbnail image of your portfolio is shown while shared on other platform -->
-    <meta
-      property="og:image"
-      content="https://devfolio.js.org/assets/devfolio.png"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <!-- Again fill content attr with the URL of this portfolio you'll host -->
-    <meta property="twitter:url" content="https://devfolio.js.org" />
-    <!-- Recommended to use the same text used within <title> element -->
-    <meta property="twitter:title" content="[Your name here] | Developer" />
-    <!-- short description that shows up while your portfolio is shared -->
-    <meta
-      property="twitter:description"
-      content="Made using DevFolio Template"
-    />
-    <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
-    <meta
-      property="twitter:image"
-      content="https://anilseervi.vercel.app/assets/devfolio.png"
-    />
-
-    <!-- link tags -->
-    <link rel="preload" as="style" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-
-    <!-- FontAwesome Icons link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script defer src="./javascript/scrollreveal.min.js"></script>
-    <script
-      defer
-      type="text/javascript"
-      src="./javascript/scrollveal.js"
-    ></script>
-
-    <!-- Remove Google Analytics once you have your portfolio website set-up -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag("js", new Date())
-
-      gtag("config", "UA-122228201-4")
-    </script>
-    <!-- End of Google Analytics -->
-  </head>
-  <body>
-    <!-- Hero Section -->
-    <div id="hero">
-      <section class="container">
-        <h1 class="hero-title">
-          Hi, my name is <span class="text-color-main name">Manaswini Gogineni</span>
-          <br />
-          I'm a Software Developer and a Cloud Enthusiast.
-        </h1>
-        <p class="hero-cta">
-          <a class="cta-btn cta-btn--hero" href="mailto:goginenim18069@gmail.com">Get in touch</a>
-        </p>
-      </section>
-      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
-        <div class="scroll-down"></div
-      ></a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">
+      Manaswini Gogineni
     </div>
-    <!-- /END Hero Section -->
-
-    <!-- About Section -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="row about-wrapper">
-          <div class="about-wrapper__image">
-            <img
-              class="img-fluid"
-              src="./assets/profile.jpg"
-              alt="Profile Image"
-              width="450"
-              height="450"
-            />
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about"> About </a></li>
+        <li><a href="#experience"> Experience </a></li>
+        <li><a href="#projects"> Projects </a></li>
+        <li><a href="#contact"> Contact </a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">
+      Manaswini Gogineni
+    </div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()"> About </a></li>
+        <li><a href="#experience" onclick="toggleMenu()"> Experience </a></li>
+        <li><a href="#projects" onclick="toggleMenu()"> Projects </a></li>
+        <li><a href="#contact" onclick="toggleMenu()"> Contact </a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section-pic-container">
+      <img src="./assets/profile-pic.jpg" alt="Manaswini profile picture" style="border-radius: 10rem;"/>
+    </div>
+    <div class="section-text">
+      <p class="section-text-p1"> Hello I am </p>
+      <h1 class="title">Manaswini Gogineni</h1>
+      <p class="section-text-p2"> full-stack developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Gogineni_Manaswini_Resume.pdf')">Download CV</button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Me</button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My linkedin profile" class="icon" onclick="window.open('https://www.linkedin.com/in/manaswini-gogineni-ba8b1b1b6/')">
+        <img src="./assets/github.png" alt="My github profile" class="icon" onclick="window.open('https://github.com/manaswini1869')">
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section-text-p1">Get to know more</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section-pic-container">
+        <img src="./assets/about-pic.jpg" alt="profile picture" class="about-pic">
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon">
+            <h3>Experience</h3>
+            <p>2+ years <br /> Full stack developer </p>
           </div>
-          <div class="about-wrapper__info">
-            <p class="about-wrapper__info-text">
-              I'm a Cloud and DevOps Enthusiast. 
-              At JP Morgan Chase, I was a core engineer in projects to automate infrastructure provisioning using Golang and Terraform, reducing deployment 
-              time and enhancing efficiency. 
-              My expertise includes a range of programming languages such as GoLang, Python, C/C++ and cloud technologies
-              like Kubernetes, Docker, and AWS. I am currently pursuing a Master's in Computer Science from the University of 
-              Wisconsin-Madison.
-            </p>
-            <p class="about-wrapper__info-text">
-              Outside of my professional work, I am always preparing to complete new certifications and
-              upskilling myself with the latest technologies in the industry. I've undertaken projects such as the 
-              Library Management System and Resource Wiki, showcasing my innovation and problem-solving skills. 
-              I'm passionate about leveraging cloud-native technologies to drive continuous improvement and 
-              innovation in DevOps practices. With a solid foundation in software engineering and cloud computing 
-              concepts, I'm eager to contribute to the success of dynamic teams and deliver impactful results 
-              in Cloud DevOps roles.
-            </p>
-            <span class="about-wrapper__cta">
-              <a href="https://drive.google.com/file/d/1_TG3fLFIDNKaNOTTkey79nA1NTJzhbTq/view?usp=sharing" target="_blank" class="cta-btn cta-btn--resume">View Resume</a>
-            </span>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Experience icon" class="icon">
+            <h3>Education</h3>
+            <p>MS Computer Science <br /> BTech Electronics and Instrumentation Engineering </p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam architecto fuga officia explicabo? Ex repudiandae corrupti totam corporis in voluptatibus aperiam unde laborum, architecto facilis ad, voluptatem illum, neque perferendis!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore laborum nostrum minima? Quam voluptate tempore impedit suscipit placeat! Quaerat, non temporibus sint quam illum quia blanditiis placeat provident soluta sit?
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'">
+  </section>
+  <section id="experience">
+    <p class="section-text-p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="detials-containers">
+          <h2 class="experience-subtitle">Backend development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
+              <div>
+                <h3>HTML</h3>
+                <p>Developed responsive web pages using HTML5</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
+              <div>
+                <h3>HTML</h3>
+                <p>Developed responsive web pages using HTML5</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
+              <div>
+                <h3>HTML</h3>
+                <p>Developed responsive web pages using HTML5</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
+              <div>
+                <h3>HTML</h3>
+                <p>Developed responsive web pages using HTML5</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
+              <div>
+                <h3>HTML</h3>
+                <p>Developed responsive web pages using HTML5</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
+              <div>
+                <h3>HTML</h3>
+                <p>Developed responsive web pages using HTML5</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
-    </section>
-    <!-- /END About Section -->
-
-    <!--Projects Section-->
-    <section id="projects">
-      <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
-
-          <!--Project-->
-          <article>
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Automated Deployment Pipeline</h3>
-              <p class="project-wrapper__text-info">
-                Implemented an end-to-end CI/CD pipeline utilizing Jenkins to 
-                automate the build, test, and deployment phases of a cloud-based application. 
-                Streamlined development workflows and increased deployment efficiency by integrating 
-                infrastructure as code (IaC) practices. Resulted in accelerated time-to-market, 
-                improved software quality, and enhanced collaboration among development teams.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a href="https://github.com/manaswini1869/Automated-Deployment-Pipeline" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-          </article>
-
-          <!--Project-->
-          <article>
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Cloud Infrastructure Automation with Terraform and AWS CloudFormation</h3>
-              <p class="project-wrapper__text-info">
-                Developed and executed a personal project focused on leveraging Terraform and AWS 
-                CloudFormation to autonomously provision and manage cloud resources 
-                including virtual machines, networking components, and storage solutions. 
-                This hands-on initiative not only honed my skills in infrastructure as code (IaC) 
-                but also demonstrated my ability to architect scalable and resilient cloud environments. 
-                By undertaking this project independently, I showcased my dedication to 
-                continuous learning and practical application of cloud technologies.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a href="https://github.com/manaswini1869/Cloud-Infrastructure-Automation" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-          </article>
-
-          <!-- Each .row is a project -->
-          <article>
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Library Management Project</h3>
-              <p > 
-                Implemented a system to keep track of the volumes in a library using GoLang. The application has information on
-books and can be used to execute all the CRUD operations along with book searches, issuance, and serialization.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a href="https://github.com/manaswini1869/Golang-Projects" target="_blank" class="cta-btn text-color-main">Source Code</a>
-              </div>
-          </article>
-          
-          <!-- /END Project -->
-
-          <!-- Each .row is a project -->
-          <article>
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Resource Wiki</h3>
-              <p class="project-wrapper__text-info">
-                This project aimed to create a CLI tool that identifies the Terraform workspace associated with an AWS resource
-using its ID, enabling users to manage the resource effectively.
-              </p>
-              <!-- <div class="project-wrapper__text-btns">
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div> -->
-            </div>
-          </article>
-          <!-- /END Project -->
-
-          <!-- Each .row is a project -->
-          <article>
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Automatic Water Tanker Filling station</h3>
-              <p class="project-wrapper__text-info">
-                This project eliminates the need for manual intervention in filling water tankers by utilizing sensors to detect
-tank status, automatically controlling water flow, and generating IoT-based water bills, protected by an Indian
-government patent (Design No. 369341-001, Patent No. 136975).
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a href="https://drive.google.com/drive/folders/1HIyGEyzbFbpk1BC_XPIs9i2MhMHThawh?usp=drive_link" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-          </article>
-          <!-- /END Project -->
+    </div>
+    <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#projects'"
+      />
+  </section>
+  <section id="projects">
+    <p class="section-text-p1">Browse My Recent</p>
+    <p class="title">Projects</p>
+    <div class="experience-details-container">
+      <div class="about-containers">
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/project-1.png" alt="Project 1" class="project-img"/>
         </div>
-      </div>
-    </section>
-    <!-- End Projects Section -->
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper">
-          <p class="contact-wrapper__text">Want to work together!</p>
-          <a class="cta-btn cta-btn--resume" href="mailto:goginenim18069@gmail.com">Let's get going</a>
+        <h2 class="experience-subtitle">Project 1</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/')">Github</button>
         </div>
-      </div>
-    </section>
-    <!-- END Contact Section -->
-
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container">
-        <a href="#hero" class="back-to-top" aria-label="go back to top">
-          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-        </a>
-        <div class="social-links">
-          <a
-            href="https://www.linkedin.com/in/manaswini-gogineni-ba8b1b1b6/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="linkedin"
-          >
-            <i class="fa-brands fa-linkedin" href="https://www.linkedin.com/in/manaswini-gogineni-ba8b1b1b6/" target="_blank"></i>
-          </a>
-          <a
-            href="https://github.com/manaswini1869"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="github"
-          >
-            <i class="fa-brands fa-github" href="https://github.com/manaswini1869" target="_blank"></i>
-          </a>
+      </div> 
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/project-2.png" alt="Project 1" class="project-img"/>
         </div>
-        <hr />
+        <h2 class="experience-subtitle">Project 2</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/')">Github</button>
+        </div>
+      </div> 
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/project-3.png" alt="Project 1" class="project-img"/>
+        </div>
+        <h2 class="experience-subtitle">Project 3</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/')">Github</button>
+        </div>
+      </div> 
       </div>
+    </div>
+    <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#contact'"
+      />
+  </section>
+  <section id="contact">
+    <p class="section-text-p1">Get In Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="email icon" class="icon contact-icon email-icon"/>
+        <p class="contact-info-text"><a href="mailto:goginenim18069@gmail.com">goginenim18069@gmail.com</a></p>
+      </div> 
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="linkedin icon" class="icon contact-icon"/>
+        <p class="contact-info-text"><a href="https://www.linkedin.com/in/manaswini-gogineni-ba8b1b1b6/">LinkedIn</a></p>
+      </div> 
+    </div>
+  </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about"> About </a></li>
+            <li><a href="#experience"> Experience </a></li>
+            <li><a href="#projects"> Projects </a></li>
+            <li><a href="#contact"> Contact </a></li>
+          </ul>
+        </div>
+      </nav>
     </footer>
-    <!-- END Footer Section -->
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear()
-    </script>
-    <script src="./javascript/vanilla-tilt.min.js"></script>
-    <script type="text/javascript" src="./javascript/valtilt.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
