@@ -309,6 +309,12 @@ section {
     margin: auto 0;
 }
 
+.about-text {
+    font-style: italic; 
+    color: rgb(0, 255, 140); 
+    font-size: large;
+}
+
 /* EXPERIENCE */
 #experience {
     position: relative;
